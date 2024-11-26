@@ -10,9 +10,9 @@ import '../App.css'
 
 const VideoList = () => {
     const [videos, setVideos] = useState([]);
-    const [search, setSearch] = useSearchParams('');
+    const [search] = useSearchParams('');
   useEffect(() => {
-    videoService.getVideos(search)
+    videoService.getVideos(search.get('search'))
       .then(response => {setVideos(response);console.log(response)})
       .catch(error => console.error('Error fetching videos:', error));
   }, []);

@@ -15,7 +15,6 @@ const UploadPage = () => {
     formData.append('title', title);
     formData.append('thumbnail', thumbnail);
     formData.append('video', video);
-    console.log(localStorage.getItem('user'))   
     formData.append('user',JSON.parse(localStorage.getItem('user'))._id)
     
     try {

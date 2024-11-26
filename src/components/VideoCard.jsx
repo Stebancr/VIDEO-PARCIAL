@@ -7,7 +7,7 @@ const VideoCard = ({ video }) => {
       <img src={video.thumbnail} alt={video.title} />
       <h3>{video.title}</h3>
       <p>
-        Uploaded by <strong>{video.user.name}</strong> on{' '}
+        Uploaded by <strong>{video.author}</strong> on{' '}
         {new Date(video.uploadedAt).toLocaleString()}
       </p>
       <a href={video.url} target="_blank" rel="noopener noreferrer">Watch Video</a>
