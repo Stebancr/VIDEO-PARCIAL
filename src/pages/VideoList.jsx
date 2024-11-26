@@ -4,7 +4,7 @@ import '../components/Styles/VideoCard.css';
 import videoService from '../services/videoService';
 import { useSearchParams } from 'react-router-dom';
 import VideoCard from '../components/VideoCard';
-import '../components/Styles/form.css'
+import '../components/Styles/Form.css'
 import '../App.css'
 
 
