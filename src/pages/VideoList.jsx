@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import '../components/Styles/videoList.css';
+import '../components/Styles/VideoList.css';
 import '../components/Styles/VideoCard.css';
 import videoService from '../services/videoService';
 import { useSearchParams } from 'react-router-dom';
