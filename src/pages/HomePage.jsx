@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import videoService from '../services/videoService';
 import VideoCard from '../components/VideoCard.jsx';
-import '../components/Styles/form.css';
+import '../components/Styles/Form.css';
 import '../components/Styles/VideoCard.css';
 
 const HomePage = () => {
