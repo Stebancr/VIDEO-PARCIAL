@@ -12,7 +12,7 @@ const LoginPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     authService.login({ email, password })
-      .then(response => console.log('Login success:', response))
+      .then(response => (response)).then(handleBack)
       .catch(error => console.error('Login error:', error));
   };
   const handleBack = () => {
@@ -31,7 +31,7 @@ const LoginPage = () => {
           Password:
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         </label>
-        <button type="submit" onClick={handleBack} className="btn">Login</button>
+        <button type="submit" className="btn">Login</button>
       </form>
       <h3 className='login-page-sumit'>¿No estás registrado? <Link to="/register">Regístrate aquí</Link></h3>
         </div>

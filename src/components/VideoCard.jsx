@@ -4,18 +4,15 @@ import './Styles/VideoCard.css';
 const VideoCard = ({ video }) => {
   return (
     <div className="video-card">
-      <img src={video.thumbnailUrl} alt={video.title} className="video-thumbnail" />
-      <div className="video-info">
-        <h3 className="video-title">{video.title}</h3>
-        <p className="video-author">{video.author}</p>
-      </div>
+      <img src={video.thumbnail} alt={video.title} />
+      <h3>{video.title}</h3>
+      <p>
+        Uploaded by <strong>{video.user.name}</strong> on{' '}
+        {new Date(video.uploadedAt).toLocaleString()}
+      </p>
+      <a href={video.url} target="_blank" rel="noopener noreferrer">Watch Video</a>
     </div>
   );
 };
 
-VideoCard.propTypes = {
-  video: PropTypes.object.isRequired,
-};
-
 export default VideoCard;
-

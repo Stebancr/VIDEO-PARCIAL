@@ -14,7 +14,8 @@ const getVideos = async (title) => {
 
 // Subir un nuevo video
 const uploadVideo = async (formData) => {
-  const response = await axios.post(API_URL + 'api/videos/upload/', formData, {
+  console.log(formData)
+  const response = await axios.post(API_URL + 'api/videos/upload', formData, {
     headers: {
       'Content-Type': 'multipart/form-data',
     },

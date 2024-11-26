@@ -15,9 +15,11 @@ const UploadPage = () => {
     formData.append('title', title);
     formData.append('thumbnail', thumbnail);
     formData.append('video', video);
-    formData.append('user', localStorage.getItem('user')._id)
+    console.log(localStorage.getItem('user'))   
+    formData.append('user',JSON.parse(localStorage.getItem('user'))._id)
+    
     try {
-      const response = await videoService.uploadVideo('/api/videos/upload', formData);
+      const response = await videoService.uploadVideo (formData);
       setMessage('Video uploaded successfully!');
     } catch (error) {
       setMessage('Failed to upload video.');
